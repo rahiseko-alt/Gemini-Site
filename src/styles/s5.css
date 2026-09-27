@@ -1,0 +1,239 @@
+/* S5. 横スクロールトラック */
+.is-horizontal-track {
+  position: relative;
+  width: 100%;
+  height: 4043px; /* 3143px + 100vh @1440x900 */
+  background-color: var(--color-dark);
+  transition: background-color var(--duration-default) var(--cubic-default);
+}
+
+.c.is-horiz-scroll {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  max-width: none;
+}
+
+.horizontal-pin-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.horizontal-track {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  align-items: center;
+  padding: 0 4rem;
+  position: relative;
+  will-change: transform;
+}
+
+/* 各要素の基本スタイル */
+.horizontal-track .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.horizontal-track .spacer {
+  flex-shrink: 0;
+  width: 284px;
+}
+
+.horizontal-track .spacer.half {
+  width: 142px;
+}
+
+/* 画像ラッパー (overflow: clip, パララックス対応) */
+.horizontal-item-img-w {
+  overflow: hidden;
+  border-radius: var(--radius-small);
+  position: relative;
+  background-color: var(--color-dark-tint-1);
+}
+
+.horizontal-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: translateX(-8%);
+  width: 116%;
+  will-change: transform;
+}
+
+/* #1: 264px (小画像 243x301 + eyebrow) */
+.col-item-1 {
+  width: 264px;
+  gap: 1.5rem;
+}
+.col-item-1 .horizontal-item-img-w {
+  width: 243px;
+  height: 301px;
+}
+.col-item-1 .eyebrow-text {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-accent);
+}
+
+/* #3: 589px (テキストコールアウト + 署名 + 大画像) */
+.col-item-3 {
+  width: 589px;
+  gap: 1.5rem;
+}
+.col-item-3 .callout-text {
+  font-family: var(--font-sans);
+  font-size: 2.76rem; /* text-med */
+  line-height: 1.1;
+  color: var(--color-off-white-2);
+}
+.col-item-3 .callout-text span {
+  color: var(--color-off-white-1);
+  font-weight: 700;
+}
+.col-item-3 .sig-svg {
+  width: 140px;
+  height: 40px;
+  stroke: var(--color-accent);
+  fill: none;
+  stroke-width: 2;
+}
+.col-item-3 .horizontal-item-img-w {
+  width: 589px;
+  height: 380px;
+}
+
+/* #5: 286px (画像2枚 上下反転・neg-margin) */
+.col-item-5 {
+  width: 286px;
+  gap: 2rem;
+  margin-top: -6rem;
+}
+.col-item-5 .horizontal-item-img-w:nth-child(1) {
+  width: 260px;
+  height: 240px;
+}
+.col-item-5 .horizontal-item-img-w:nth-child(2) {
+  width: 286px;
+  height: 320px;
+}
+
+/* #7: 192px (小画像 + 数字 "1" + 旗アイコン) */
+.col-item-7 {
+  width: 192px;
+  gap: 1rem;
+}
+.col-item-7 .horizontal-item-img-w {
+  width: 192px;
+  height: 250px;
+}
+.col-item-7 .badge-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+.col-item-7 .badge-number {
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  color: var(--color-accent);
+  line-height: 0.9;
+}
+.col-item-7 .flag-svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--color-off-white-1);
+}
+
+/* #8: 187px (小画像1枚) */
+.col-item-8 {
+  width: 187px;
+}
+.col-item-8 .horizontal-item-img-w {
+  width: 187px;
+  height: 280px;
+}
+
+/* #10: 549px (テキストコールアウト2 + 画像) */
+.col-item-10 {
+  width: 549px;
+  gap: 1.5rem;
+}
+.col-item-10 .callout-text-2 {
+  font-family: var(--font-sans);
+  font-size: 2.2rem;
+  line-height: 1.15;
+  color: var(--color-off-white-1);
+}
+.col-item-10 .horizontal-item-img-w {
+  width: 549px;
+  height: 350px;
+}
+
+/* #12: 285px (画像2枚) */
+.col-item-12 {
+  width: 285px;
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+.col-item-12 .horizontal-item-img-w:nth-child(1) {
+  width: 285px;
+  height: 260px;
+}
+.col-item-12 .horizontal-item-img-w:nth-child(2) {
+  width: 240px;
+  height: 220px;
+}
+
+/* 途中テーマ切替トリガー (トラックの60%位置) */
+.sticky-track-theme-change {
+  position: absolute;
+  left: 60%;
+  top: 0;
+  width: 90px;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* タブレット以下フォールバック (<=991px): 縦の2列マソンリー */
+@media (max-width: 991px) {
+  .is-horizontal-track {
+    height: auto !important;
+    padding: 4rem 1.25rem;
+  }
+  .c.is-horiz-scroll {
+    position: relative !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .horizontal-track {
+    flex-direction: column !important;
+    width: 100% !important;
+    transform: none !important;
+    padding: 0 !important;
+    gap: 3rem;
+  }
+  .horizontal-track .spacer {
+    display: none;
+  }
+  .horizontal-track .col {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .horizontal-item-img-w {
+    width: 100% !important;
+    max-height: 400px;
+  }
+}

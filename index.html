@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APEX DRIVER — Official Site</title>
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/motions.css" />
+    <link rel="stylesheet" href="/src/styles/s0-s1.css" />
+    <link rel="stylesheet" href="/src/styles/s2.css" />
+    <link rel="stylesheet" href="/src/styles/s3-s4.css" />
+    <link rel="stylesheet" href="/src/styles/s5.css" />
+    <link rel="stylesheet" href="/src/styles/s6-s8.css" />
+    <link rel="stylesheet" href="/src/styles/s9-s11.css" />
+    <link rel="stylesheet" href="/src/styles/s12-s13.css" />
+    <link rel="stylesheet" href="/src/styles/responsive.css" />
+  </head>
+  <body>
+    <!-- S1 固定ナビ -->
+    <nav class="nav" data-nav-theme="light">
+      <a href="#" class="nav-wordmark" aria-label="APEX DRIVER Home">
+        <span class="nav-wordmark-line1">APEX</span>
+        <span class="nav-wordmark-line2">DRIVER</span>
+      </a>
+
+      <div class="nav-logo-w">
+        <svg class="nav-logo-svg" viewBox="0 0 40 40">
+          <polygon points="20,4 36,34 4,34" stroke="currentColor" stroke-width="3" fill="none" stroke-linejoin="round" />
+          <polyline points="12,24 20,10 28,24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" />
+        </svg>
+      </div>
+
+      <div class="nav-right-w">
+        <a href="#store" class="btn-w nav-btn-store">
+          <span class="btn-inner">
+            <span class="btn-text" data-anim="text-hover">STORE</span>
+          </span>
+        </a>
+        <button class="nav-hamburger-btn" id="nav-hamburger" aria-label="Toggle Menu">
+          <span class="nav-hamburger-line"></span>
+          <span class="nav-hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- S1 フルスクリーンメニュー -->
+    <div class="nav-menu-w" id="nav-menu" data-oval data-oval-auto="manual">
+      <div class="nav-menu-main">
+        <div class="nav-menu-tiles" id="nav-menu-tiles">
+          <div class="nav-menu-tile" data-speed="1.2">
+            <svg viewBox="0 0 180 260" width="100%" height="100%"><rect width="180" height="260" fill="#2d3224"/><circle cx="90" cy="130" r="45" fill="#3e4333"/><text x="90" y="135" fill="#d2ff00" font-size="12" text-anchor="middle" font-family="monospace">01 / SPEED</text></svg>
+          </div>
+          <div class="nav-menu-tile" data-speed="0.8">
+            <svg viewBox="0 0 180 260" width="100%" height="100%"><rect width="180" height="260" fill="#34382a"/><polygon points="90,75 140,185 40,185" fill="#444937"/><text x="90" y="140" fill="#d2ff00" font-size="12" text-anchor="middle" font-family="monospace">02 / FOCUS</text></svg>
+          </div>
+          <div class="nav-menu-tile" data-speed="1.5">
+            <svg viewBox="0 0 180 260" width="100%" height="100%"><rect width="180" height="260" fill="#25291d"/><rect x="45" y="85" width="90" height="90" fill="#3b3f2f"/><text x="90" y="135" fill="#d2ff00" font-size="12" text-anchor="middle" font-family="monospace">03 / TRACK</text></svg>
+          </div>
+          <div class="nav-menu-tile" data-speed="0.9">
+            <svg viewBox="0 0 180 260" width="100%" height="100%"><rect width="180" height="260" fill="#383d2e"/><ellipse cx="90" cy="130" rx="55" ry="35" fill="#4b503e"/><text x="90" y="135" fill="#d2ff00" font-size="12" text-anchor="middle" font-family="monospace">04 / VICTORY</text></svg>
+          </div>
+          <div class="nav-menu-tile" data-speed="1.1">
+            <svg viewBox="0 0 180 260" width="100%" height="100%"><rect width="180" height="260" fill="#2f3426"/><circle cx="90" cy="130" r="50" stroke="#d2ff00" stroke-dasharray="6,4" fill="#3a3f30" stroke-width="2"/><text x="90" y="135" fill="#d2ff00" font-size="12" text-anchor="middle" font-family="monospace">05 / APEX</text></svg>
+          </div>
+        </div>
+
+        <div class="nav-menu-links">
+          <a href="#hero" class="nav-menu-link text-title-lg" data-anim="text-hover">OVERVIEW</a>
+          <a href="#track" class="nav-menu-link text-title-lg" data-anim="text-hover">JOURNEY</a>
+          <a href="#otot-home" class="nav-menu-link text-title-lg" data-anim="text-hover">ON / OFF</a>
+          <a href="#helmets" class="nav-menu-link text-title-lg" data-anim="text-hover">HELMETS</a>
+          <a href="#store" class="nav-menu-link text-title-lg" data-anim="text-hover">OFFICIAL STORE</a>
+        </div>
+      </div>
+
+      <div class="nav-menu-footer">
+        <div class="nav-menu-socials">
+          <a href="#" class="nav-menu-social-link" data-anim="text-hover">INSTAGRAM</a>
+          <a href="#" class="nav-menu-social-link" data-anim="text-hover">X / TWITTER</a>
+          <a href="#" class="nav-menu-social-link" data-anim="text-hover">YOUTUBE</a>
+          <a href="#" class="nav-menu-social-link" data-anim="text-hover">TIKTOK</a>
+        </div>
+
+        <div class="nav-menu-enquiry">
+          <span class="nav-menu-enquiry-label">BUSINESS ENQUIRIES</span>
+          <a href="mailto:contact@apex-driver-placeholder.test" class="nav-menu-enquiry-email">PARTNERSHIPS@APEX-DRIVER.TEST</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- S0 横向き警告 -->
+    <div class="mob-landscape-block">
+      <svg class="mob-rotate-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+        <rect x="5" y="2" width="14" height="20" rx="3" />
+        <path d="M12 18h.01" />
+      </svg>
+      <p class="text-title">PLEASE ROTATE YOUR DEVICE</p>
+      <p class="text-para" style="color: var(--color-off-white-2);">Portrait orientation is recommended for optimal experience.</p>
+    </div>
+
+    <!-- S1 右端スクロールバー -->
+    <div class="scroll-indicator-bar" id="scroll-bar"></div>
+
+    <!-- S0 ローディング -->
+    <div class="transition-layer" id="loader-layer">
+      <div class="loader-center-w">
+        <svg class="loader-logo-svg" id="loader-logo" viewBox="0 0 60 60">
+          <polygon points="30,6 54,52 6,52" />
+          <polyline points="18,36 30,16 42,36" />
+        </svg>
+      </div>
+      <button class="btn-w loader-enter-btn" id="loader-enter-btn">
+        <span class="btn-inner">
+          <span class="btn-text">ENTER</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <main class="main-w">
+      <!-- S2 ヒーロー -->
+      <section class="s home-hero" id="hero" data-sticky-hero="track">
+        <!-- 3D Head 表示領域 -->
+        <div class="gl-canvas-target" data-gl="head" style="position: absolute; top:0; left:0; width:100%; height:100%;"></div>
+
+        <!-- 左下: NEXT RACE ウィジェット -->
+        <div class="home-hero-next-race-w" id="next-race-widget">
+          <span class="next-race-eyebrow">NEXT RACE</span>
+          <svg class="next-race-circuit-svg" viewBox="0 0 70 60">
+            <path d="M15,15 C25,5 50,8 55,20 C60,32 50,45 35,48 C20,50 8,35 15,15 Z" />
+            <circle cx="15" cy="15" r="3" fill="#d2ff00" />
+          </svg>
+          <div class="next-race-divider"></div>
+          <span class="next-race-team">TEAM · SINCE 2019</span>
+        </div>
+
+        <!-- 中央下: h1 (sr-only) -->
+        <h1 class="sr-only">APEX DRIVER OFFICIAL WEBSITE</h1>
+
+        <!-- タブレット以下専用: TAP TO LOCK ボタン -->
+        <button class="btn-w is-touch-swipe" id="touch-swipe-btn" aria-label="Tap to lock scroll and rotate helmet">
+          <span class="btn-inner">
+            <span class="btn-text">TAP TO<br>LOCK</span>
+          </span>
+        </button>
+      </section>
+
+      <!-- S3 マーキー (position: absolute, heroの上に重なる) -->
+      <section class="s home-marquee" id="marquee">
+        <div class="marqee-adv-layout">
+          <div class="marquee-adv-top-w">
+            <!-- 署名アニメ (SVG stroke-dashoffset scrub) -->
+            <svg class="marquee-signature-svg" id="marquee-signature" viewBox="0 0 160 50">
+              <path d="M10,35 C30,15 45,40 60,20 C75,5 90,45 105,25 C120,10 135,30 150,15" />
+              <path d="M40,25 C70,25 100,28 140,22" />
+            </svg>
+            <span class="marquee-adv-eyebrow">A MESSAGE FROM THE TRACK</span>
+          </div>
+          <!-- 3D カルーセル描画矩形 -->
+          <div class="marquee-gl-target-w" data-gl="carousel"></div>
+        </div>
+      </section>
+
+      <!-- S4 インパクト文 -->
+      <section class="s is-impact" id="impact">
+        <div class="impact-content-w">
+          <!-- 上部アイコン (67px) -->
+          <svg class="impact-icon-svg" viewBox="0 0 67 67">
+            <circle cx="33.5" cy="33.5" r="30" stroke-dasharray="4,3" />
+            <path d="M22,33.5 C22,25 28,18 33.5,18 C39,18 45,25 45,33.5 C45,42 39,48 33.5,48 C28,48 22,42 22,33.5 Z" />
+            <line x1="18" y1="33.5" x2="49" y2="33.5" />
+          </svg>
+
+          <!-- 本文: .text-impact-lg, 強調語だけ weight 700 -->
+          <h2 class="text-impact-lg impact-text" id="impact-text">
+            PUSHING EVERY <span class="is-bold">LIMIT</span>, CHASING EVERY <span class="is-bold">WIN</span>, GIVING IT ALL EVERY WAY. BUILDING A <span class="is-bold">LEGACY</span> ON AND OFF THE TRACK.
+          </h2>
+        </div>
+      </section>
+
+      <!-- S5 横スクロールトラック -->
+      <section class="s is-horizontal-track" id="track">
+        <div class="c is-horiz-scroll">
+          <div class="horizontal-pin-wrap">
+            <div class="horizontal-track" id="horizontal-track">
+              <!-- #1: .col 264px (小画像 + eyebrow) -->
+              <div class="col col-item-1">
+                <div class="horizontal-item-img-w">
+                  <svg class="horizontal-item-img" viewBox="0 0 243 301"><rect width="243" height="301" fill="#3b3f30"/><circle cx="120" cy="150" r="60" fill="#4d533f"/><text x="120" y="155" fill="#d2ff00" font-size="12" text-anchor="middle" font-family="monospace">PADDOCK / 01</text></svg>
+                </div>
+                <span class="eyebrow-text" data-track-eyebrow>SILVERSTONE, 2024</span>
+              </div>
+
+              <!-- #2: .spacer 284px -->
+              <div class="spacer"></div>
+
+              <!-- #3: .col.large-img 589px (コールアウト + 署名 + 大画像) -->
+              <div class="col col-item-3">
+                <p class="callout-text">DRIVEN BY <span>PASSION</span>, DEFINED BY <span>PRECISION</span>.</p>
+                <svg class="sig-svg" viewBox="0 0 140 40"><path d="M10,25 C35,10 50,30 75,15 C95,5 110,35 130,20" /></svg>
+                <div class="horizontal-item-img-w">
+                  <svg class="horizontal-item-img" viewBox="0 0 589 380"><rect width="589" height="380" fill="#2d3224"/><polygon points="294,80 440,300 150,300" fill="#3e4333"/><text x="294" y="200" fill="#d2ff00" font-size="16" text-anchor="middle" font-family="monospace">CHAMPIONSHIP VICTORY</text></svg>
+                </div>
+              </div>
+
+              <!-- #4: .spacer 284px -->
+              <div class="spacer"></div>
+
+              <!-- #5: .col.flip.neg-margin 286px (画像2枚 上下反転配置) -->
+              <div class="col col-item-5">
+                <div class="horizontal-item-img-w">
+                  <svg class="horizontal-item-img" viewBox="0 0 260 240"><rect width="260" height="240" fill="#34382a"/><circle cx="130" cy="120" r="50" fill="#484e3a"/><text x="130" y="125" fill="#d2ff00" font-size="12" text-anchor="middle" font-family="monospace">QUALIFYING / LAP</text></svg>
+                </div>
+                <div class="horizontal-item-img-w">
+                  <svg class="horizontal-item-img" viewBox="0 0 286 320"><rect width="286" height="320" fill="#292e21"/><rect x="60" y="80" width="160" height="160" fill="#3c422f"/><text x="143" y="165" fill="#d2ff00" font-size="12" text-anchor="middle" font-family="monospace">TELEMETRY DATA</text></svg>
+                </div>
+              </div>
+
+              <!-- #6: .spacer.half 142px -->
+              <div class="spacer half"></div>
+
+              <!-- 途中 60% テーマ切替トリガー (暗 -> 明) -->
+              <div class="sticky-track-theme-change"></div>
+
+              <!-- #7: .col 192px (小画像 + 数字 "1" + 旗アイコン) -->
+              <div class="col col-item-7">
+                <div class="horizontal-item-img-w">
+                  <svg class="horizontal-item-img" viewBox="0 0 192 250"><rect width="192" height="250" fill="#383d2e"/><circle cx="96" cy="125" r="45" fill="#4e543f"/><text x="96" y="130" fill="#d2ff00" font-size="11" text-anchor="middle" font-family="monospace">PODIUM TOP</text></svg>
+                </div>
+                <div class="badge-row">
+                  <span class="badge-number">1</span>
+                  <svg class="flag-svg" viewBox="0 0 24 24"><path d="M4 2v20M4 4h14l-3 5 3 5H4" fill="none" stroke="currentColor" stroke-width="2" /></svg>
+                </div>
+              </div>
+
+              <!-- #8: .col 187px (小画像1枚) -->
+              <div class="col col-item-8">
+                <div class="horizontal-item-img-w">
+                  <svg class="horizontal-item-img" viewBox="0 0 187 280"><rect width="187" height="280" fill="#25291d"/><polygon points="93,60 150,220 36,220" fill="#393e2c"/><text x="93" y="150" fill="#d2ff00" font-size="11" text-anchor="middle" font-family="monospace">PIT STOP 1.9s</text></svg>
+                </div>
+              </div>
+
+              <!-- #9: .spacer.half 142px -->
+              <div class="spacer half"></div>
+
+              <!-- #10: .col 549px (テキストコールアウト2 + 画像) -->
+              <div class="col col-item-10">
+                <p class="callout-text-2">THE RELENTLESS PURSUIT OF PERFECTION.</p>
+                <div class="horizontal-item-img-w">
+                  <svg class="horizontal-item-img" viewBox="0 0 549 350"><rect width="549" height="350" fill="#363a2c"/><circle cx="274" cy="175" r="80" fill="#4a4f3c"/><text x="274" y="180" fill="#d2ff00" font-size="15" text-anchor="middle" font-family="monospace">GLOBAL CIRCUIT TOUR</text></svg>
+                </div>
+              </div>
+
+              <!-- #11: .spacer 284px -->
+              <div class="spacer"></div>
+
+              <!-- #12: .col.neg-margin 285px (画像2枚) -->
+              <div class="col col-item-12">
+                <div class="horizontal-item-img-w">
+                  <svg class="horizontal-item-img" viewBox="0 0 285 260"><rect width="285" height="260" fill="#2c3023"/><rect x="60" y="50" width="165" height="160" fill="#3f4532"/><text x="142" y="135" fill="#d2ff00" font-size="12" text-anchor="middle" font-family="monospace">NIGHT SESSION</text></svg>
+                </div>
+                <div class="horizontal-item-img-w">
+                  <svg class="horizontal-item-img" viewBox="0 0 240 220"><rect width="240" height="220" fill="#383d2e"/><ellipse cx="120" cy="110" rx="70" ry="45" fill="#4d533f"/><text x="120" y="115" fill="#d2ff00" font-size="12" text-anchor="middle" font-family="monospace">CELEBRATION</text></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- S6 ON/OFF 分岐 -->
+      <section class="s is-otot-home" id="otot-home">
+        <!-- 背景画像左右 2枚 (343x816, scrub y: 10% -> -10%) -->
+        <div class="otot-home-bg">
+          <div class="otot-home-img-w is-1">
+            <svg viewBox="0 0 343 816"><rect width="343" height="816" fill="#e2e5d8"/><circle cx="171" cy="408" r="140" fill="#c7ccba"/><text x="171" y="415" fill="#282c20" font-size="16" text-anchor="middle" font-family="monospace">HELMET SILHOUETTE</text></svg>
+          </div>
+          <div class="otot-home-img-w is-2">
+            <svg viewBox="0 0 343 816"><rect width="343" height="816" fill="#e6e8dc"/><polygon points="171,200 300,600 42,600" fill="#ccd1bd"/><text x="171" y="415" fill="#282c20" font-size="16" text-anchor="middle" font-family="monospace">CASUAL APPAREL</text></svg>
+          </div>
+        </div>
+
+        <div class="otot-home-layout">
+          <!-- 左ブロック: ON TRACK -->
+          <div class="otot-block is-left">
+            <div class="otot-title-w">
+              <h2 class="text-impact-reg-serif" data-anim-high="right, var(--color-dark-tint-1)">ON</h2>
+              <h2 class="text-impact-reg-sans" data-anim-high="right, var(--color-dark-tint-1)">TRACK</h2>
+            </div>
+            <svg class="otot-phrase-svg" viewBox="0 0 188 60"><path d="M10,30 Q94,5 178,30" stroke-width="2"/></svg>
+            <p class="text-para otot-desc">Pushed to the maximum velocity. The pursuit of the podium where every millisecond defines reality.</p>
+            <a href="#track" class="btn-w">
+              <span class="btn-inner">
+                <span class="btn-text" data-anim="text-hover">DISCOVER ON-TRACK</span>
+              </span>
+            </a>
+          </div>
+
+          <!-- 右ブロック: OFF TRACK -->
+          <div class="otot-block is-right">
+            <div class="otot-title-w">
+              <h2 class="text-impact-reg-serif" data-anim-high="left, var(--color-dark-tint-1)">OFF</h2>
+              <h2 class="text-impact-reg-sans" data-anim-high="left, var(--color-dark-tint-1)">TRACK</h2>
+            </div>
+            <svg class="otot-phrase-svg" viewBox="0 0 188 60"><path d="M10,30 Q94,55 178,30" stroke-width="2"/></svg>
+            <p class="text-para otot-desc">Beyond the asphalt. Creative explorations, lifestyle, and design innovations crafted for the next generation.</p>
+            <a href="#store" class="btn-w">
+              <span class="btn-inner">
+                <span class="btn-text" data-anim="text-hover">EXPLORE OFF-TRACK</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- S7 フルブリード画像 -->
+      <section class="s is-otot-end" id="otot-end">
+        <div class="otot-end-gradient-top"></div>
+        <svg class="is-otot-home-end" viewBox="0 0 1440 1080" preserveAspectRatio="xMidYMid slice">
+          <rect width="1440" height="1080" fill="#24281c"/>
+          <circle cx="720" cy="540" r="380" fill="#333827"/>
+          <text x="720" y="550" fill="#d2ff00" font-size="28" text-anchor="middle" font-family="monospace">FULL BLEED ATMOSPHERE</text>
+        </svg>
+      </section>
+
+      <!-- S8 ヘルメット・ギャラリー -->
+      <section class="s home-helmets" id="helmets">
+        <!-- テーマ切替トリガー (明 -> 暗 --color-black) -->
+        <div data-theme-trigger="black"></div>
+
+        <div class="c">
+          <div class="title-layout grid-main">
+            <h2 class="text-title" data-anim-high="right, var(--color-accent)">HELMETS /<br>HALL OF FAME</h2>
+            <p class="text-para" style="color: var(--color-grey-para);">An exclusive curation of bespoke lids worn across legendary races, milestones, and championship podiums around the globe.</p>
+          </div>
+
+          <div class="helmets-header-spacer"></div>
+
+          <!-- 4x4 16枚ヘルメットグリッド -->
+          <div class="helmet-grid">
+            <!-- 16 アイテム生成 (ノッチSVG枠 + base/hover画像差替 + 1.05倍) -->
+            <!-- Item 1 -->
+            <div class="helmet-grid-item">
+              <svg class="helmet-frame-svg" viewBox="0 0 407 411">
+                <path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" />
+                <path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" />
+              </svg>
+              <div class="helmet-imgs-w">
+                <svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#3b3f30"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 01</text></svg>
+                <svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#525843"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg>
+              </div>
+              <div class="helmet-info-w">
+                <span class="helmet-name">SILVERSTONE SPECIAL</span>
+                <span class="helmet-year">2024</span>
+              </div>
+              <div class="helmet-notch-icon-w">
+                <svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="helmet-grid-item">
+              <svg class="helmet-frame-svg" viewBox="0 0 407 411">
+                <path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" />
+                <path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" />
+              </svg>
+              <div class="helmet-imgs-w">
+                <svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#2d3224"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 02</text></svg>
+                <svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#464d37"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg>
+              </div>
+              <div class="helmet-info-w">
+                <span class="helmet-name">MONACO GLORY</span>
+                <span class="helmet-year">2024</span>
+              </div>
+              <div class="helmet-notch-icon-w">
+                <svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="helmet-grid-item">
+              <svg class="helmet-frame-svg" viewBox="0 0 407 411">
+                <path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" />
+                <path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" />
+              </svg>
+              <div class="helmet-imgs-w">
+                <svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#323826"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 03</text></svg>
+                <svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#4d553b"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg>
+              </div>
+              <div class="helmet-info-w">
+                <span class="helmet-name">SUZUKA APEX</span>
+                <span class="helmet-year">2023</span>
+              </div>
+              <div class="helmet-notch-icon-w">
+                <svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="helmet-grid-item">
+              <svg class="helmet-frame-svg" viewBox="0 0 407 411">
+                <path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" />
+                <path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" />
+              </svg>
+              <div class="helmet-imgs-w">
+                <svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#292e20"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 04</text></svg>
+                <svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#444d34"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg>
+              </div>
+              <div class="helmet-info-w">
+                <span class="helmet-name">SPA SPEED RACER</span>
+                <span class="helmet-year">2023</span>
+              </div>
+              <div class="helmet-notch-icon-w">
+                <svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg>
+              </div>
+            </div>
+
+            <!-- Items 5 - 16 を同様のノッチ構造で配置 (4x4 計16アイテム) -->
+            <!-- 5 to 16 -->
+            <div class="helmet-grid-item"><svg class="helmet-frame-svg" viewBox="0 0 407 411"><path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /><path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /></svg><div class="helmet-imgs-w"><svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#353b28"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 05</text></svg><svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#50583e"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg></div><div class="helmet-info-w"><span class="helmet-name">MONZA TEMPO</span><span class="helmet-year">2023</span></div><div class="helmet-notch-icon-w"><svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div></div>
+
+            <div class="helmet-grid-item"><svg class="helmet-frame-svg" viewBox="0 0 407 411"><path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /><path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /></svg><div class="helmet-imgs-w"><svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#323826"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 06</text></svg><svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#4d553b"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg></div><div class="helmet-info-w"><span class="helmet-name">INTERLAGOS HEAT</span><span class="helmet-year">2022</span></div><div class="helmet-notch-icon-w"><svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div></div>
+
+            <div class="helmet-grid-item"><svg class="helmet-frame-svg" viewBox="0 0 407 411"><path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /><path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /></svg><div class="helmet-imgs-w"><svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#2d3224"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 07</text></svg><svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#464d37"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg></div><div class="helmet-info-w"><span class="helmet-name">MELBOURNE SURGE</span><span class="helmet-year">2022</span></div><div class="helmet-notch-icon-w"><svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div></div>
+
+            <div class="helmet-grid-item"><svg class="helmet-frame-svg" viewBox="0 0 407 411"><path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /><path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /></svg><div class="helmet-imgs-w"><svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#292e20"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 08</text></svg><svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#444d34"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg></div><div class="helmet-info-w"><span class="helmet-name">BAHRAIN DUSK</span><span class="helmet-year">2022</span></div><div class="helmet-notch-icon-w"><svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div></div>
+
+            <div class="helmet-grid-item"><svg class="helmet-frame-svg" viewBox="0 0 407 411"><path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /><path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /></svg><div class="helmet-imgs-w"><svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#353b28"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 09</text></svg><svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#50583e"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg></div><div class="helmet-info-w"><span class="helmet-name">MONTREAL FLASH</span><span class="helmet-year">2021</span></div><div class="helmet-notch-icon-w"><svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div></div>
+
+            <div class="helmet-grid-item"><svg class="helmet-frame-svg" viewBox="0 0 407 411"><path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /><path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /></svg><div class="helmet-imgs-w"><svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#323826"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 10</text></svg><svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#4d553b"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg></div><div class="helmet-info-w"><span class="helmet-name">AUSTIN STAR</span><span class="helmet-year">2021</span></div><div class="helmet-notch-icon-w"><svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div></div>
+
+            <div class="helmet-grid-item"><svg class="helmet-frame-svg" viewBox="0 0 407 411"><path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /><path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /></svg><div class="helmet-imgs-w"><svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#2d3224"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 11</text></svg><svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#464d37"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg></div><div class="helmet-info-w"><span class="helmet-name">SINGAPORE NIGHTS</span><span class="helmet-year">2020</span></div><div class="helmet-notch-icon-w"><svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div></div>
+
+            <div class="helmet-grid-item"><svg class="helmet-frame-svg" viewBox="0 0 407 411"><path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /><path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /></svg><div class="helmet-imgs-w"><svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#292e20"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 12</text></svg><svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#444d34"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg></div><div class="helmet-info-w"><span class="helmet-name">ABU DHABI FINALE</span><span class="helmet-year">2020</span></div><div class="helmet-notch-icon-w"><svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div></div>
+
+            <div class="helmet-grid-item"><svg class="helmet-frame-svg" viewBox="0 0 407 411"><path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /><path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /></svg><div class="helmet-imgs-w"><svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#353b28"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 13</text></svg><svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#50583e"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg></div><div class="helmet-info-w"><span class="helmet-name">ZANDVOORT SEA</span><span class="helmet-year">2020</span></div><div class="helmet-notch-icon-w"><svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div></div>
+
+            <div class="helmet-grid-item"><svg class="helmet-frame-svg" viewBox="0 0 407 411"><path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /><path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /></svg><div class="helmet-imgs-w"><svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#323826"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 14</text></svg><svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#4d553b"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg></div><div class="helmet-info-w"><span class="helmet-name">IMOLA TRIBUTE</span><span class="helmet-year">2019</span></div><div class="helmet-notch-icon-w"><svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div></div>
+
+            <div class="helmet-grid-item"><svg class="helmet-frame-svg" viewBox="0 0 407 411"><path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /><path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /></svg><div class="helmet-imgs-w"><svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#2d3224"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 15</text></svg><svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#464d37"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">PROFILE VIEW</text></svg></div><div class="helmet-info-w"><span class="helmet-name">RED BULL RING STORM</span><span class="helmet-year">2019</span></div><div class="helmet-notch-icon-w"><svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div></div>
+
+            <div class="helmet-grid-item"><svg class="helmet-frame-svg" viewBox="0 0 407 411"><path class="helmet-frame-path is-base" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /><path class="helmet-frame-path is-overlay" d="M8 1h390.89a7 7 0 0 1 7 7v356.983a7 7 0 0 1-7 7H263.329a24 24 0 0 0-18.766 9.038l-16.499 20.694A22 22 0 0 1 210.862 410H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" /></svg><div class="helmet-imgs-w"><svg class="helmet-img is-base" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#292e20"/><rect x="80" y="130" width="140" height="40" rx="10" fill="#111112"/><text x="150" y="270" fill="#d2ff00" font-size="14" text-anchor="middle" font-family="monospace">EDITION 16</text></svg><svg class="helmet-img is-hover" viewBox="0 0 300 300"><circle cx="150" cy="150" r="100" fill="#444d34"/><rect x="100" y="130" width="130" height="40" rx="10" fill="#d2ff00"/><text x="150" y="270" fill="#ffffff" font-size="14" text-anchor="middle" font-family="monospace">DEBUT RACER</text></svg></div><div class="helmet-info-w"><span class="helmet-name">ROOKIE LAUNCH</span><span class="helmet-year">2019</span></div><div class="helmet-notch-icon-w"><svg class="helmet-notch-svg" viewBox="0 0 24 24"><polygon points="12,2 22,20 2,20"/></svg></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- S9 コールアウト -->
+      <section class="s is-callout" id="callout">
+        <svg class="callout-icon-svg" viewBox="0 0 71 37">
+          <path d="M5,18.5 Q35.5,2 66,18.5 Q35.5,35 5,18.5 Z" />
+          <circle cx="35.5" cy="18.5" r="5" fill="#d2ff00" />
+        </svg>
+        <p class="text-para callout-para">THE PURSUIT CONTINUES ON EVERY CORNER OF THE CIRCUIT. EXPLORE THE FULL RACING HERITAGE AND SEASON TELEMETRY.</p>
+        <a href="#track" class="btn-w">
+          <span class="btn-inner">
+            <span class="btn-text" data-anim="text-hover">VIEW ON TRACK</span>
+          </span>
+        </a>
+      </section>
+
+      <!-- S10 ストア -->
+      <section class="s is-store" id="store">
+        <!-- 上部 107px バイザー帯 -->
+        <div class="exe-top-visor"></div>
+        <!-- テーマ切替トリガー (暗 -> 明) -->
+        <div data-theme-trigger="light"></div>
+
+        <div class="c">
+          <div class="grid-main exe-grid">
+            <!-- 左側: 固定テキスト -->
+            <div class="exe-text-w">
+              <span class="exe-eyebrow">STORE</span>
+              <h2 class="text-title" data-anim-high="right, var(--color-accent-off)">NEW OFFICIAL<br>COLLECTION</h2>
+              <p class="text-para exe-desc">Technical racewear reimagined for street utility. Crafted with aerodynamic precision, bespoke textiles, and uncompromising performance.</p>
+              <a href="#store" class="btn-w">
+                <span class="btn-inner">
+                  <span class="btn-text" data-anim="text-hover">VISIT THE STORE</span>
+                </span>
+              </a>
+            </div>
+
+            <!-- 右側: 重ね配置商品画像 -->
+            <div class="exe-col-2">
+              <div class="exe-product-img is-1">
+                <svg viewBox="0 0 525 694" width="100%" height="100%"><rect width="525" height="694" fill="#2d3224"/><circle cx="262" cy="347" r="160" fill="#3f4532"/><text x="262" y="355" fill="#d2ff00" font-size="20" text-anchor="middle" font-family="monospace">RACE HOODIE / 01</text></svg>
+              </div>
+              <div class="exe-product-img is-2">
+                <svg viewBox="0 0 333 238" width="100%" height="100%"><rect width="333" height="238" fill="#3a402d"/><polygon points="166,40 280,200 50,200" fill="#4d553b"/><text x="166" y="140" fill="#d2ff00" font-size="16" text-anchor="middle" font-family="monospace">PADDOCK CAP</text></svg>
+              </div>
+              <div class="exe-product-img is-3">
+                <svg viewBox="0 0 189 242" width="100%" height="100%"><rect width="189" height="242" fill="#22251a"/><rect x="30" y="50" width="129" height="142" fill="#323826"/><text x="94" y="130" fill="#d2ff00" font-size="13" text-anchor="middle" font-family="monospace">TEE / V2</text></svg>
+              </div>
+              <div class="exe-cta-sticker-w">
+                <svg class="exe-sticker-svg" viewBox="0 0 203 153">
+                  <rect x="5" y="5" width="193" height="143" rx="16" fill="#d2ff00" stroke="#111112" stroke-width="4" />
+                  <text x="101" y="65" fill="#111112" font-size="20" font-weight="900" font-family="sans-serif" text-anchor="middle">LIMITED</text>
+                  <text x="101" y="95" fill="#111112" font-size="24" font-weight="900" font-family="sans-serif" text-anchor="middle">DROP 2026</text>
+                  <circle cx="170" cy="30" r="10" fill="#ff6b00" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- S11 パートナー -->
+      <section class="s is-collabs" id="collabs">
+        <div class="c collabs-header">
+          <div class="title-layout grid-main">
+            <h2 class="text-title" data-anim-high="right, var(--color-accent-off)">PARTNERS /<br>& CAMPAIGNS</h2>
+            <div>
+              <p class="text-para" style="margin-bottom: 2rem;">Collaborating with global engineering leaders, iconic design houses, and innovators pushing cultural boundaries.</p>
+              <a href="#" class="btn-w">
+                <span class="btn-inner">
+                  <span class="btn-text" data-anim="text-hover">VIEW PARTNERSHIPS</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ロゴマーキー (11個のダミーロゴ) -->
+        <div class="marquee-advanced">
+          <div class="marquee-advanced-track">
+            <!-- 1回目 -->
+            <span class="collab-logo-item">NORTHWIND</span>
+            <span class="collab-logo-item">HELIX</span>
+            <span class="collab-logo-item">OSAKA WORKS</span>
+            <span class="collab-logo-item">QUANTUM</span>
+            <span class="collab-logo-item">VORTEX</span>
+            <span class="collab-logo-item">APEX DYNAMICS</span>
+            <span class="collab-logo-item">STRATOS</span>
+            <span class="collab-logo-item">KINETIC</span>
+            <span class="collab-logo-item">AERO TECH</span>
+            <span class="collab-logo-item">SYNAPSE</span>
+            <span class="collab-logo-item">VELOCITY</span>
+            <!-- 2回目 (シームレスループ) -->
+            <span class="collab-logo-item">NORTHWIND</span>
+            <span class="collab-logo-item">HELIX</span>
+            <span class="collab-logo-item">OSAKA WORKS</span>
+            <span class="collab-logo-item">QUANTUM</span>
+            <span class="collab-logo-item">VORTEX</span>
+            <span class="collab-logo-item">APEX DYNAMICS</span>
+            <span class="collab-logo-item">STRATOS</span>
+            <span class="collab-logo-item">KINETIC</span>
+            <span class="collab-logo-item">AERO TECH</span>
+            <span class="collab-logo-item">SYNAPSE</span>
+            <span class="collab-logo-item">VELOCITY</span>
+          </div>
+        </div>
+
+        <!-- 大型 SVG イラスト (パララックス) -->
+        <div class="home-collab-rive-w">
+          <svg class="collab-rive-svg" viewBox="0 0 943 665">
+            <!-- パーツ1: ベース幾何 -->
+            <g class="collab-part collab-part-1">
+              <path d="M100,550 C300,450 600,600 850,500 L900,665 L50,665 Z" fill="#e8eae0" />
+            </g>
+            <!-- パーツ2: トロフィー/コアシルエット -->
+            <g class="collab-part collab-part-2">
+              <polygon points="500,100 680,480 320,480" fill="#d2ff00" opacity="0.4" />
+              <circle cx="500" cy="240" r="90" stroke="#3b3c38" stroke-width="6" fill="none" />
+            </g>
+            <!-- パーツ3: アセントライン -->
+            <g class="collab-part collab-part-3">
+              <path d="M250,300 Q500,50 750,350" stroke="#ff6b00" stroke-width="8" stroke-linecap="round" fill="none" />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <!-- S12 ソーシャル -->
+      <section class="s is-socials" id="socials">
+        <div class="socials-header-w">
+          <svg class="socials-icon-svg" viewBox="0 0 46 46">
+            <circle cx="23" cy="23" r="20" stroke="currentColor" />
+            <path d="M15 23h16M23 15v16" stroke="currentColor" stroke-linecap="round" />
+            <circle cx="23" cy="23" r="5" fill="var(--color-accent)" stroke="none" />
+          </svg>
+          <h2 class="socials-title text-title" data-anim-high="right, var(--color-accent-off)">
+            <span class="socials-title-line1">WHAT'S UP</span>
+            <span class="socials-title-line2">ON SOCIALS</span>
+          </h2>
+        </div>
+
+        <!-- カード7枚 扇状配置 -->
+        <div class="callout-socials-card-layout">
+          <!-- Card 0 -->
+          <div class="socials-card-item">
+            <svg viewBox="0 0 267 467">
+              <rect width="267" height="467" fill="#1b1d16" />
+              <rect x="20" y="20" width="227" height="300" rx="20" fill="#292c21" />
+              <circle cx="133" cy="170" r="70" fill="#3f4533" />
+              <text x="133" y="175" fill="#d2ff00" font-size="14" font-family="monospace" text-anchor="middle">QUALIFYING P1</text>
+              <text x="24" y="360" fill="#fff" font-size="18" font-weight="700" font-family="sans-serif">FASTEST LAP</text>
+              <text x="24" y="390" fill="#a4aa96" font-size="13" font-family="sans-serif">Circuit Telemetry &amp; Speed Trap</text>
+              <text x="24" y="430" fill="#d2ff00" font-size="12" font-family="monospace">@APEX_DRIVER</text>
+            </svg>
+          </div>
+
+          <!-- Card 1 -->
+          <div class="socials-card-item">
+            <svg viewBox="0 0 267 467">
+              <rect width="267" height="467" fill="#20241a" />
+              <rect x="20" y="20" width="227" height="300" rx="20" fill="#2d3324" />
+              <polygon points="133,90 200,240 66,240" fill="#4d553b" />
+              <text x="133" y="180" fill="#d2ff00" font-size="14" font-family="monospace" text-anchor="middle">GARAGE CAM</text>
+              <text x="24" y="360" fill="#fff" font-size="18" font-weight="700" font-family="sans-serif">PITSTOP DRILL</text>
+              <text x="24" y="390" fill="#a4aa96" font-size="13" font-family="sans-serif">1.82s Target Execution</text>
+              <text x="24" y="430" fill="#d2ff00" font-size="12" font-family="monospace">@APEX_DRIVER</text>
+            </svg>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="socials-card-item">
+            <svg viewBox="0 0 267 467">
+              <rect width="267" height="467" fill="#24291e" />
+              <rect x="20" y="20" width="227" height="300" rx="20" fill="#363d2c" />
+              <circle cx="133" cy="170" r="85" fill="#4a533c" />
+              <path d="M80 170 Q133 110 186 170" stroke="#d2ff00" stroke-width="4" fill="none" />
+              <text x="133" y="175" fill="#d2ff00" font-size="14" font-family="monospace" text-anchor="middle">VISOR VIEW</text>
+              <text x="24" y="360" fill="#fff" font-size="18" font-weight="700" font-family="sans-serif">RAIN MASTER</text>
+              <text x="24" y="390" fill="#a4aa96" font-size="13" font-family="sans-serif">Wet Weather Strategy Analysis</text>
+              <text x="24" y="430" fill="#d2ff00" font-size="12" font-family="monospace">@APEX_DRIVER</text>
+            </svg>
+          </div>
+
+          <!-- Card 3 (中央カード) -->
+          <div class="socials-card-item">
+            <svg viewBox="0 0 267 467">
+              <rect width="267" height="467" fill="#282c20" />
+              <rect x="20" y="20" width="227" height="300" rx="20" fill="#3f4532" />
+              <polygon points="133,70 210,250 56,250" fill="#d2ff00" opacity="0.3" />
+              <circle cx="133" cy="160" r="60" fill="#d2ff00" />
+              <path d="M110,160 L128,178 L160,140" stroke="#111112" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+              <text x="133" y="280" fill="#d2ff00" font-size="15" font-family="monospace" font-weight="bold" text-anchor="middle">VICTORY CELEBRATION</text>
+              <text x="24" y="360" fill="#fff" font-size="20" font-weight="900" font-family="sans-serif">PODIUM TOP STEP</text>
+              <text x="24" y="390" fill="#a4aa96" font-size="13" font-family="sans-serif">2026 World Championship Round 03</text>
+              <text x="24" y="430" fill="#d2ff00" font-size="12" font-family="monospace">@APEX_DRIVER</text>
+            </svg>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="socials-card-item">
+            <svg viewBox="0 0 267 467">
+              <rect width="267" height="467" fill="#24291e" />
+              <rect x="20" y="20" width="227" height="300" rx="20" fill="#363d2c" />
+              <rect x="50" y="70" width="167" height="200" rx="14" fill="#4a533c" />
+              <circle cx="133" cy="170" r="50" fill="#d2ff00" opacity="0.2" />
+              <text x="133" y="175" fill="#d2ff00" font-size="14" font-family="monospace" text-anchor="middle">AERO TUNNEL</text>
+              <text x="24" y="360" fill="#fff" font-size="18" font-weight="700" font-family="sans-serif">WIND TUNNEL 2.0</text>
+              <text x="24" y="390" fill="#a4aa96" font-size="13" font-family="sans-serif">Testing CFD Downforce Specs</text>
+              <text x="24" y="430" fill="#d2ff00" font-size="12" font-family="monospace">@APEX_DRIVER</text>
+            </svg>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="socials-card-item">
+            <svg viewBox="0 0 267 467">
+              <rect width="267" height="467" fill="#20241a" />
+              <rect x="20" y="20" width="227" height="300" rx="20" fill="#2d3324" />
+              <ellipse cx="133" cy="170" rx="80" ry="50" fill="#424b35" />
+              <text x="133" y="175" fill="#d2ff00" font-size="14" font-family="monospace" text-anchor="middle">OFF-TRACK LAB</text>
+              <text x="24" y="360" fill="#fff" font-size="18" font-weight="700" font-family="sans-serif">TRAINING PROTOCOL</text>
+              <text x="24" y="390" fill="#a4aa96" font-size="13" font-family="sans-serif">Neck &amp; Reflex Conditioning</text>
+              <text x="24" y="430" fill="#d2ff00" font-size="12" font-family="monospace">@APEX_DRIVER</text>
+            </svg>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="socials-card-item">
+            <svg viewBox="0 0 267 467">
+              <rect width="267" height="467" fill="#1b1d16" />
+              <rect x="20" y="20" width="227" height="300" rx="20" fill="#292c21" />
+              <circle cx="133" cy="170" r="70" fill="#3f4533" />
+              <text x="133" y="175" fill="#d2ff00" font-size="14" font-family="monospace" text-anchor="middle">STREET DROP</text>
+              <text x="24" y="360" fill="#fff" font-size="18" font-weight="700" font-family="sans-serif">CAPSULE 01</text>
+              <text x="24" y="390" fill="#a4aa96" font-size="13" font-family="sans-serif">Limited Apparel Release</text>
+              <text x="24" y="430" fill="#d2ff00" font-size="12" font-family="monospace">@APEX_DRIVER</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="socials-footer-w">
+          <span class="socials-footer-label">JOIN THE COMMUNITY</span>
+          <div class="socials-links-row">
+            <a href="#" class="socials-link" data-anim="text-hover">INSTAGRAM</a>
+            <a href="#" class="socials-link" data-anim="text-hover">YOUTUBE</a>
+            <a href="#" class="socials-link" data-anim="text-hover">X / TWITTER</a>
+            <a href="#" class="socials-link" data-anim="text-hover">DISCORD</a>
+            <a href="#" class="socials-link" data-anim="text-hover">TIKTOK</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- S13 フッター -->
+      <section class="s is-footer" id="footer">
+        <div class="footer-bg-gradient"></div>
+        <div class="footer-layout-w">
+          <div class="footer-layout-clip">
+            <!-- 4カラム上部グリッド -->
+            <div class="footer-top-grid">
+              <div>
+                <div class="footer-col-title">RACING</div>
+                <ul class="footer-nav-list">
+                  <li><a href="#hero">2026 SEASON</a></li>
+                  <li><a href="#track">ON TRACK</a></li>
+                  <li><a href="#helmets">HELMET ARCHIVE</a></li>
+                  <li><a href="#telemetry">CIRCUIT TELEMETRY</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="footer-col-title">CULTURE</div>
+                <ul class="footer-nav-list">
+                  <li><a href="#otot">OFF TRACK</a></li>
+                  <li><a href="#collabs">PARTNERSHIPS</a></li>
+                  <li><a href="#socials">COMMUNITY</a></li>
+                  <li><a href="#media">PRESS KIT</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="footer-col-title">STORE</div>
+                <ul class="footer-nav-list">
+                  <li><a href="#store">NEW ARRIVALS</a></li>
+                  <li><a href="#store">RACEWEAR TECH</a></li>
+                  <li><a href="#store">HEADWEAR &amp; CAPS</a></li>
+                  <li><a href="#store">ACCESSORIES</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="footer-col-title">SIGN UP</div>
+                <p class="text-para" style="font-size: 0.95rem; margin-bottom: 1.5rem; color: var(--color-off-white-2);">Be the first to receive race telemetry, limited capsule drops, and behind-the-scenes access.</p>
+                <a href="#store" class="btn-w footer-btn-signup">
+                  <span class="btn-inner">
+                    <span class="btn-text" data-anim="text-hover">JOIN PADDOCK CLUB</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 中段: ブランド名・360°ヘルメット・TOPボタン -->
+            <div class="footer-mid-row">
+              <div style="font-family: var(--font-sans); font-size: 2.2rem; font-weight: 900; letter-spacing: -0.02em;">APEX DRIVER</div>
+
+              <div class="footer-helmet-360-w">
+                <svg class="footer-helmet-img" viewBox="0 0 160 160">
+                  <circle cx="80" cy="80" r="76" fill="#1b1d16" stroke="#3b3f30" stroke-width="2" />
+                  <path d="M40 75 Q80 40 120 75 L115 110 Q80 125 45 110 Z" fill="#2d3224" />
+                  <ellipse cx="80" cy="80" rx="36" ry="18" fill="#d2ff00" opacity="0.85" />
+                  <path d="M45 80 Q80 92 115 80" stroke="#111112" stroke-width="3" fill="none" />
+                </svg>
+                <span class="footer-helmet-label">HOVER 360° INSPECT</span>
+              </div>
+
+              <a href="#" class="btn-w" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
+                <span class="btn-inner">
+                  <span class="btn-text" data-anim="text-hover">BACK TO TOP ↑</span>
+                </span>
+              </a>
+            </div>
+
+            <!-- パートナーロゴ列 (ダミーブランド名) -->
+            <div class="footer-bottom-logos">
+              <span class="footer-partner-logo">NORTHWIND</span>
+              <span class="footer-partner-logo">HELIX MOTORS</span>
+              <span class="footer-partner-logo">OSAKA RACING</span>
+              <span class="footer-partner-logo">STRATOS LAB</span>
+              <span class="footer-partner-logo">VORTEX CARBON</span>
+            </div>
+
+            <!-- 最下部 リーガルリンク -->
+            <div class="footer-legal-links-w">
+              <span>&copy; 2026 APEX DRIVER. ALL RIGHTS RESERVED.</span>
+              <div style="display: flex; gap: 1.5rem;">
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">TERMS OF SERVICE</a>
+                <a href="#">COOKIE SETTINGS</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 単一WebGLキャンバス、position:fixed、全シーン共用 -->
+    <canvas class="gl"></canvas>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

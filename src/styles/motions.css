@@ -1,0 +1,149 @@
+/* 共通モーションスタイル (M1〜M6) */
+
+/* M1. ラインリビール */
+.high-line-wrap {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.high-line-reveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+  transform: scaleX(0);
+}
+
+.high-line-inner {
+  display: block;
+  position: relative;
+  clip-path: inset(0 100% 0 0);
+  will-change: clip-path;
+}
+
+/* M2. 文字ホバー */
+.text-hover-w {
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  line-height: inherit;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+.text-hover-primary,
+.text-hover-secondary {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.text-hover-secondary {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.text-hover-char {
+  display: inline-block;
+  transform: translateY(0);
+  will-change: transform;
+}
+
+/* M3. 楕円クリップ */
+[data-oval] {
+  clip-path: ellipse(20% 0% at 50% 0%);
+  will-change: clip-path;
+}
+
+[data-oval].is-open,
+.is-oval-active {
+  clip-path: ellipse(120% 100% at 50% 0%);
+}
+
+/* M5. ボタン (.btn-w) */
+.btn-w {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.75rem; /* 50px @1440 */
+  padding: 0 1rem;
+  border-radius: var(--radius-btn);
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-family: var(--font-sans);
+  font-size: 1.05rem; /* 14px @1440 */
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--duration-default) var(--cubic-default),
+              color var(--duration-default) var(--cubic-default);
+  outline: none;
+  position: relative;
+  user-select: none;
+}
+
+.btn-w:hover {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+}
+
+.btn-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s var(--cubic-default);
+}
+
+.btn-w:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.btn-arrow svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+/* M6 テーマ切替用 */
+[data-theme-trigger] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .high-line-inner {
+    clip-path: inset(0 0 0 0) !important;
+  }
+  .high-line-reveal {
+    display: none !important;
+  }
+  [data-oval] {
+    clip-path: none !important;
+  }
+}

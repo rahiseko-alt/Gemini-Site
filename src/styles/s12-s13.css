@@ -1,0 +1,268 @@
+/* S12 ソーシャル & S13 フッター スタイル */
+
+/* S12. ソーシャル (.is-socials, 965px, --color-white) */
+.is-socials {
+  position: relative;
+  width: 100%;
+  min-height: 965px;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  z-index: 13;
+  overflow: hidden;
+  padding: 107px 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.socials-header-w {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.socials-icon-svg {
+  width: 46px;
+  height: 46px;
+  stroke: var(--color-dark-tint-1);
+  fill: none;
+  stroke-width: 2;
+}
+
+.socials-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+  text-align: center;
+}
+
+.socials-title-line1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
+.socials-title-line2 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-dark-tint-1);
+}
+
+/* カード7枚 扇状レイアウト (.callout-socials-card-layout) */
+.callout-socials-card-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1440px;
+  height: 520px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.socials-card-item {
+  width: 267px;
+  height: 467px;
+  border-radius: 44px; /* 3.3rem */
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 20px 45px rgba(40, 44, 32, 0.18);
+  transition: transform 0.5s var(--cubic-default), box-shadow 0.5s ease;
+  cursor: pointer;
+  will-change: transform, opacity;
+}
+
+.socials-card-item svg,
+.socials-card-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ホバー時: scale 1.04, rotate: 0 */
+.socials-card-item:hover {
+  transform: scale(1.04) rotate(0deg) !important;
+  z-index: 10 !important;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+}
+
+.socials-footer-w {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.socials-footer-label {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-dark-tint-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.socials-links-row {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.socials-link {
+  color: var(--color-dark);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* S13. フッター (.is-footer, 967px) */
+.is-footer {
+  position: relative;
+  width: 100%;
+  min-height: 967px;
+  padding: 14rem var(--container-padding) 3rem; /* 上 spacer 187px */
+  z-index: 14;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer-bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-grey-1) 100%);
+  z-index: -1;
+}
+
+.footer-layout-w {
+  position: relative;
+  width: 100%;
+  max-width: 1407px;
+  margin: 0 auto;
+}
+
+/* SVGマスクで右上・右下が丸く抉れた形状 (角丸3rem, 右辺中央に半径6remの半円切欠き) */
+.footer-layout-clip {
+  position: relative;
+  width: 100%;
+  min-height: 747px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border-radius: 3rem;
+  padding: 3.5rem 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  will-change: clip-path;
+  /* 抉れ形状: mask-image SVG */
+  mask-image: radial-gradient(circle at 100% 50%, transparent 0, transparent 6rem, black 6.1rem);
+  -webkit-mask-image: radial-gradient(circle at 100% 50%, transparent 0, transparent 6rem, black 6.1rem);
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+  width: 100%;
+}
+
+.footer-col-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-off-white-2);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.08em;
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-nav-list a {
+  color: var(--color-off-white-1);
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.3s;
+}
+
+.footer-nav-list a:hover {
+  color: var(--color-accent);
+}
+
+.footer-btn-signup {
+  height: 4rem;
+  font-size: 1.25rem;
+}
+
+.footer-mid-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--color-dark-tint-1);
+  border-bottom: 1px solid var(--color-dark-tint-1);
+}
+
+.footer-helmet-360-w {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-helmet-img {
+  width: 180px;
+  height: 180px;
+  transition: transform 2s cubic-bezier(0.2, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.footer-helmet-img:hover {
+  transform: rotate(360deg);
+}
+
+.footer-helmet-label {
+  font-size: 0.75rem;
+  color: var(--color-off-white-2);
+  letter-spacing: 0.05em;
+}
+
+.footer-bottom-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.footer-partner-logo {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-off-white-2);
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+.footer-legal-links-w {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 2rem;
+  font-size: 0.82rem;
+  color: var(--color-dark-tint-2);
+}
+
+.footer-legal-links-w a {
+  color: inherit;
+  text-decoration: none;
+}

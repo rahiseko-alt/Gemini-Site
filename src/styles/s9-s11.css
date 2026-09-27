@@ -1,0 +1,230 @@
+/* S9 コールアウト, S10 ストア, S11 パートナー スタイル */
+
+/* S9. コールアウト (.is-callout, 476px, --color-black) */
+.is-callout {
+  position: relative;
+  width: 100%;
+  height: 476px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 0 var(--container-padding);
+  text-align: center;
+  z-index: 10;
+}
+
+.callout-icon-svg {
+  width: 71px;
+  height: 37px;
+  stroke: var(--color-accent);
+  fill: none;
+  stroke-width: 2;
+}
+
+.callout-para {
+  max-width: 30rem;
+  color: var(--color-off-white-2);
+  line-height: 1.5;
+}
+
+/* S10. ストア (.is-store, 907px, --color-white) */
+.is-store {
+  position: relative;
+  width: 100%;
+  min-height: 907px;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  z-index: 11;
+  overflow: hidden;
+  padding-bottom: 107px;
+}
+
+/* 上部 107px バイザー帯 (--color-black つなぎ帯) */
+.exe-top-visor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 107px;
+  background-color: var(--color-black);
+  z-index: 1;
+}
+
+.exe-grid {
+  position: relative;
+  z-index: 2;
+  margin-top: 107px;
+  height: 694px;
+}
+
+/* 左側 テキスト (position: sticky, top: 30vh, col 1-2) */
+.exe-text-w {
+  grid-column: 1 / span 2;
+  position: sticky;
+  top: 30vh;
+  height: 422px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding-right: 2rem;
+}
+
+.exe-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-dark-tint-2);
+}
+
+.exe-desc {
+  color: var(--color-dark-tint-1);
+  max-width: 26rem;
+  line-height: 1.5;
+}
+
+/* 右側 重ね配置画像 (col 3-4, relative, height: 694px) */
+.exe-col-2 {
+  grid-column: 3 / span 2;
+  position: relative;
+  height: 694px;
+}
+
+.exe-product-img {
+  position: absolute;
+  overflow: hidden;
+  border-radius: var(--radius-small);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  will-change: transform;
+}
+
+/* .is-1: 525x694, top:0, left:0 */
+.exe-product-img.is-1 {
+  width: 78%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #313627;
+  z-index: 1;
+}
+
+/* .is-2: 333x238, top: 55%, left: 40% */
+.exe-product-img.is-2 {
+  width: 55%;
+  height: 38%;
+  top: 55%;
+  left: 40%;
+  background-color: #444b36;
+  border-radius: var(--radius-med);
+  z-index: 2;
+}
+
+/* .is-3: 189x242, top: 10%, right: 0 */
+.exe-product-img.is-3 {
+  width: 32%;
+  height: 38%;
+  top: 10%;
+  right: 0;
+  background-color: #262a1d;
+  z-index: 3;
+}
+
+/* ステッカー (.exe-cta-sticker-w, 203x153, bottom: 5%, left: -5%) */
+.exe-cta-sticker-w {
+  position: absolute;
+  width: 203px;
+  height: 153px;
+  bottom: 5%;
+  left: -5%;
+  z-index: 4;
+  transform: rotate(-8deg);
+  will-change: transform;
+}
+
+.exe-sticker-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+}
+
+/* S11. パートナー (.is-collabs, 795px, --color-white) */
+.is-collabs {
+  position: relative;
+  width: 100%;
+  min-height: 795px;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  z-index: 12;
+  overflow: hidden;
+  padding: 15rem 0 15rem; /* 上下スペーサー約 267px ≒ 15-20rem */
+}
+
+.collabs-header {
+  margin-bottom: 6rem; /* 107px */
+}
+
+/* ロゴマーキー (.marquee-advanced, 高さ 46px) */
+.marquee-advanced {
+  width: 100%;
+  height: 46px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(40, 44, 32, 0.1);
+  border-bottom: 1px solid rgba(40, 44, 32, 0.1);
+  background-color: rgba(244, 244, 237, 0.5);
+}
+
+.marquee-advanced-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 4rem;
+  animation: translateXLeft 40s linear infinite;
+  will-change: transform;
+}
+
+@keyframes translateXLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.collab-logo-item {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-dark-tint-1);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* 大型 SVG イラスト (.home-collab-rive-w, 943x665, 右寄せ, bottom: -20%) */
+.home-collab-rive-w {
+  position: absolute;
+  right: -5%;
+  bottom: -20%;
+  width: 60vw;
+  max-width: 943px;
+  height: 665px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.85;
+  will-change: transform;
+}
+
+.collab-rive-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.collab-part {
+  will-change: transform;
+}

@@ -1,0 +1,101 @@
+/* S2 ヒーローセクション */
+.home-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 var(--container-padding) 2rem;
+}
+
+/* S2 左下: NEXT RACE ウィジェット (幅 99px, 高 203px) */
+.home-hero-next-race-w {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 2rem;
+  width: 99px;
+  height: 203px;
+  border: 1px solid var(--color-dark-tint-2);
+  border-radius: 0.5rem;
+  background-color: rgba(40, 44, 32, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  clip-path: ellipse(100% 0% at 50% 0%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.home-hero-next-race-w.is-visible {
+  opacity: 1;
+}
+
+.next-race-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: var(--color-off-white-2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.next-race-circuit-svg {
+  width: 65px;
+  height: 55px;
+  stroke: var(--color-accent);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.next-race-divider {
+  width: 80%;
+  height: 1px;
+  background-color: var(--color-dark-tint-2);
+}
+
+.next-race-team {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--color-off-white-1);
+  text-align: center;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+/* タブレット以下専用: TAP TO LOCK ボタン (.is-touch-swipe) */
+.is-touch-swipe {
+  display: none;
+  position: absolute;
+  right: 1.25rem;
+  bottom: 2rem;
+  width: 4rem;
+  height: 4rem;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border-radius: var(--radius-btn);
+  z-index: 10;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.1;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+@media (max-width: 991px) {
+  .is-touch-swipe {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,342 @@
+/* S0. ローディング & モバイル横向き警告 */
+.transition-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-accent);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  clip-path: inset(0 0 0 0);
+  will-change: clip-path;
+}
+
+.loader-center-w {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-logo-svg {
+  width: 53px;
+  height: 53px;
+  fill: none;
+  stroke: var(--color-black);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loader-enter-btn {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  background-color: var(--color-black);
+  color: var(--color-accent);
+}
+
+.loader-enter-btn:hover {
+  background-color: var(--color-dark-tint-1);
+  color: var(--color-white);
+}
+
+.loader-enter-btn.is-ready {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease;
+}
+
+/* モバイル横向き警告 */
+.mob-landscape-block {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (orientation: landscape) and (max-width: 991px) {
+  .mob-landscape-block {
+    display: flex;
+  }
+}
+
+.mob-rotate-icon {
+  width: 48px;
+  height: 48px;
+  stroke: var(--color-accent);
+  animation: rotatePhone 2.5s infinite ease-in-out;
+}
+
+@keyframes rotatePhone {
+  0%, 10% { transform: rotate(90deg); }
+  40%, 60% { transform: rotate(0deg); }
+  90%, 100% { transform: rotate(90deg); }
+}
+
+/* S1. 固定ナビ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  padding: 1.25rem var(--container-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+  pointer-events: none;
+  transition: color var(--duration-default) var(--cubic-default);
+}
+
+.nav > * {
+  pointer-events: auto;
+}
+
+/* テーマ別ナビ配色 (0.75s 補間) */
+.nav[data-nav-theme="light"] {
+  color: var(--color-black);
+}
+
+.nav[data-nav-theme="dark"] {
+  color: var(--color-white);
+}
+
+/* ナビ左：ワードマーク（2行、38px） */
+.nav-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.95;
+  text-decoration: none;
+  color: inherit;
+  user-select: none;
+}
+
+.nav-wordmark-line1 {
+  font-family: var(--font-sans);
+  font-size: 2.85rem; /* 38px @1440 */
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.nav-wordmark-line2 {
+  font-family: var(--font-sans);
+  font-size: 2.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ナビ中央：ロゴマーク */
+.nav-logo-w {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-logo-svg {
+  width: 32px;
+  height: 32px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+/* ナビ右：STOREボタン + ハンバーガー */
+.nav-right-w {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-btn-store {
+  height: 3.125rem; /* 50px */
+}
+
+.nav-hamburger-btn {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-dark);
+  border-radius: var(--radius-btn);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid var(--color-dark-tint-1);
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+.nav-hamburger-line {
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-white);
+  transition: transform 0.4s var(--cubic-default), opacity 0.4s;
+}
+
+.nav-menu-w.is-active ~ .nav .nav-hamburger-btn .nav-hamburger-line:nth-child(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.nav-menu-w.is-active ~ .nav .nav-hamburger-btn .nav-hamburger-line:nth-child(2) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+/* フルスクリーンメニュー (.nav-menu-w) */
+.nav-menu-w {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: calc(var(--nav-height) + 2rem) var(--container-padding) 3rem;
+  clip-path: ellipse(20% 0% at 50% 0%);
+  pointer-events: none;
+  visibility: hidden;
+  will-change: clip-path;
+}
+
+.nav-menu-w.is-active {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.nav-menu-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex: 1;
+}
+
+/* 左側：5枚の画像タイル（パララックス） */
+.nav-menu-tiles {
+  display: flex;
+  gap: 1.25rem;
+  width: 50%;
+  perspective: 1000px;
+}
+
+.nav-menu-tile {
+  width: 20vw;
+  max-width: 180px;
+  height: 260px;
+  border-radius: var(--radius-small);
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-dark-tint-1);
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.nav-menu-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+/* 右側：リンク5本 */
+.nav-menu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.nav-menu-link {
+  color: var(--color-white);
+  text-decoration: none;
+  display: block;
+}
+
+/* 下部：SNS 4本 + business enquiries */
+.nav-menu-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  border-top: 1px solid var(--color-dark-tint-1);
+  padding-top: 1.5rem;
+}
+
+.nav-menu-socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu-social-link {
+  color: var(--color-off-white-2);
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.3s;
+}
+
+.nav-menu-social-link:hover {
+  color: var(--color-accent);
+}
+
+.nav-menu-enquiry {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.nav-menu-enquiry-label {
+  font-size: 0.85rem;
+  color: var(--color-off-white-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-menu-enquiry-email {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.3s;
+}
+
+.nav-menu-enquiry-email:hover {
+  color: var(--color-accent);
+}
+
+/* S1 右端スクロールインジケーターバー */
+.scroll-indicator-bar {
+  position: fixed;
+  right: 0.5rem;
+  top: 50%;
+  width: 2px;
+  height: 10vh;
+  background-color: var(--color-accent);
+  z-index: 60;
+  pointer-events: none;
+  transform: translateY(0);
+  will-change: transform;
+}

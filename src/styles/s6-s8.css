@@ -1,0 +1,296 @@
+/* S6 ON/OFF 分岐, S7 フルブリード画像, S8 ヘルメット・ギャラリー */
+
+/* S6. ON/OFF 分岐 (.is-otot-home, 100vh, --color-white) */
+.is-otot-home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 7;
+}
+
+.otot-home-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+  pointer-events: none;
+}
+
+.otot-home-img-w {
+  width: 24vw;
+  max-width: 343px;
+  height: 85vh;
+  max-height: 816px;
+  overflow: hidden;
+  border-radius: var(--radius-med);
+  position: relative;
+  will-change: transform;
+}
+
+.otot-home-img-w svg,
+.otot-home-img-w img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.otot-home-layout {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 350px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--container-padding);
+}
+
+.otot-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 45%;
+  will-change: transform;
+}
+
+.otot-block.is-left {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.otot-block.is-right {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.otot-title-w {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  line-height: 0.85;
+}
+
+.otot-phrase-svg {
+  width: 188px;
+  height: 60px;
+  stroke: var(--color-dark-tint-1);
+  fill: none;
+}
+
+.otot-desc {
+  max-width: 24rem;
+  color: var(--color-dark-tint-1);
+}
+
+/* S7. フルブリード画像 (.is-otot-end, 100vh) */
+.is-otot-end {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-white);
+  z-index: 8;
+}
+
+.otot-end-gradient-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(180deg, var(--color-white) 0%, rgba(244, 244, 237, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.is-otot-home-end {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120vh;
+  object-fit: cover;
+  will-change: transform;
+}
+
+/* S8. ヘルメット・ギャラリー (.home-helmets, 1696px, --color-black) */
+.home-helmets {
+  position: relative;
+  width: 100%;
+  min-height: 1696px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: calc(var(--section-padding) * 1.5) var(--container-padding);
+  z-index: 9;
+}
+
+.helmets-header-spacer {
+  height: 8.75rem; /* 117px @1440 */
+}
+
+/* 4x4 グリッド */
+.helmet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.helmet-grid-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 407 / 411;
+  cursor: pointer;
+  will-change: transform, opacity;
+}
+
+/* ノッチ枠 (SVG) */
+.helmet-frame-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.helmet-frame-path.is-base {
+  stroke: var(--color-dark-tint-1);
+  stroke-width: 1.5;
+  fill: rgba(40, 44, 32, 0.2);
+}
+
+.helmet-frame-path.is-overlay {
+  stroke: var(--color-accent);
+  stroke-width: 2.5;
+  fill: none;
+  opacity: 0;
+  transition: opacity var(--duration-default) var(--cubic-default);
+}
+
+.helmet-grid-item:hover .helmet-frame-path.is-overlay {
+  opacity: 1;
+}
+
+/* ヘルメット画像2枚 (base と hover 差替 + 1.05倍) */
+.helmet-imgs-w {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 70%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.helmet-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform var(--duration-default) var(--cubic-default),
+              opacity var(--duration-default) var(--cubic-default);
+}
+
+.helmet-img.is-base {
+  opacity: 1;
+}
+
+.helmet-img.is-hover {
+  opacity: 0;
+}
+
+.helmet-grid-item:hover .helmet-img {
+  transform: scale(1.05);
+}
+
+.helmet-grid-item:hover .helmet-img.is-base {
+  opacity: 0;
+}
+
+.helmet-grid-item:hover .helmet-img.is-hover {
+  opacity: 1;
+}
+
+/* 左下メタ情報 (名前 + 年) */
+.helmet-info-w {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.helmet-name {
+  font-family: var(--font-sans);
+  font-size: 0.9rem; /* 12px */
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.helmet-year {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--color-grey-para);
+}
+
+/* 右下ノッチ内アイコン */
+.helmet-notch-icon-w {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 1.2rem;
+  z-index: 4;
+}
+
+.helmet-notch-svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--color-dark-tint-2);
+  fill: none;
+  transition: stroke var(--duration-default) var(--cubic-default);
+}
+
+.helmet-grid-item:hover .helmet-notch-svg {
+  stroke: var(--color-accent);
+}
+
+/* タブレット・モバイル用レスポンシブ */
+@media (max-width: 991px) {
+  .helmet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .helmet-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 2rem;
+    gap: 1.25rem;
+  }
+  .helmet-grid-item {
+    flex: 0 0 80vw;
+    scroll-snap-align: start;
+  }
+}

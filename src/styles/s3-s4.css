@@ -1,0 +1,119 @@
+/* S3 マーキー & S4 インパクト文 スタイル */
+
+/* S3 マーキー (position: absolute, heroの上に重なる) */
+.home-marquee {
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.marqee-adv-layout {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.marquee-adv-top-w {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  padding: 0 var(--container-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  pointer-events: auto;
+}
+
+.marquee-signature-svg {
+  width: 160px;
+  height: 48px;
+  stroke: var(--color-accent);
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.marquee-adv-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-off-white-2);
+  text-transform: uppercase;
+}
+
+.marquee-gl-target-w {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* S4 インパクト文 (.is-impact, 約114vh = 1027px @1440) */
+.is-impact {
+  position: relative;
+  width: 100%;
+  min-height: 114vh;
+  margin-top: 100vh; /* absolute の S3 領域を考慮 */
+  background-color: var(--color-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+  padding: var(--container-padding);
+}
+
+.impact-content-w {
+  max-width: 1068px;
+  padding: 80px 0 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  text-align: center;
+}
+
+.impact-icon-svg {
+  width: 67px;
+  height: 67px;
+  stroke: var(--color-accent);
+  stroke-width: 2;
+  fill: none;
+}
+
+.impact-text {
+  color: var(--color-off-white-1);
+  word-break: break-word;
+}
+
+.impact-text .is-bold {
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+/* SplitText によるラインマスクアニメーション用スタイル */
+.impact-line-mask {
+  overflow: hidden;
+  display: block;
+  padding-bottom: 0.1em;
+}
+
+.impact-line {
+  display: block;
+  transform: translateY(100%);
+  will-change: transform;
+}
